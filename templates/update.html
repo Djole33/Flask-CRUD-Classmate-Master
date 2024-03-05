@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<title>Classmate Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center;">Update Classmate</h1>
+
+    <div class="form">
+        <form action="/update/{{ classmate.id }}" method="POST">
+        <div class="input-group mb-3">
+            <input type="text" id="name" name="name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default", value="{{ classmate.name }}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" id="surname" name="surname" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default", value="{{ classmate.surname }}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" id="indeks" name="indeks" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default", value="{{ classmate.indeks }}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" id="phone" name="phone" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default", value="{{ classmate.phone }}">
+        </div>
+        <button type="submit" class="btn btn-success">Update Classmate</button>
+    </form>
+    </div>
+</div>
+{% endblock %}
